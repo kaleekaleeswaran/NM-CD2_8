@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.loggedText{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-size: 2em;
+        color: #fff;
+    
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    
+    .loggedIcon{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-size: 5em;
+        color: #fff;
+    
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .logOut{
+        top: 10%;
+        left: 90% !important;
+    }
+    .toDo{
+        top: 30%;
+    }
+    
+    .itemFatto{
+        font-size: 1.5em;
+        position: relative;
+        left: -30%;
+        top: 5vh;
+    
+        background: none;
+        border: none;
+    }
+    
+    .itemElimina{
+        position: relative;
+        left: 30%;
+        top: 5vh;
+        
+        background: none;
+        border: none;
+    }
+    
+    .todos{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 50%;
+        height: 55%;
+    
+        text-align: center;
+        overflow-y: auto;
+    }
+    
+    .todosList{
+        
+        list-style-type: none;
+        margin-bottom: 10px;
+    
+        max-width: 100%;
+        word-wrap: break-word;
+    
+        background: #FFFFFFAA;
+        border-radius: 20px;
+        padding-bottom: 10px;
+    }
+    
+    
+    .inputTitolo, .inputContenuto{
+    
+        position: absolute;
+        top: 87.5%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .inputTitolo{
+        
+        left: 30% !important;
+        width: 200px !important;
+    }
+    .inputContenuto{
+        
+        left: 60% !important;
+        width: 500px !important;
+        margin-left: 5px;
+    }
+    .inputButton{
+        
+        font-size: 1em;
+        top: 95%;
+        left: 50% !important;
+    }
+    .NotLoggedIcon{
+
+background: none;
+border: none;
+outline: none;
+
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+font-size: 8em;
+font-weight: 700;
+}
+@import "./notFound.css";
+@import "./home.css";
+@import "./toDo.css";
+@import "./loginRegister.css";  
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    outline: none;
+}
+
+html, body{
+
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+    overflow: hidden;
+}
+
+body{
+    background: rgb(223,178,255);
+    background: linear-gradient(45deg, rgba(223,178,255,1) 0%, rgba(170,241,255,1) 100%);
+
+}
+
+.columns, .column{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px;
+    width: auto;
+    height: auto;
+
+    background: linear-gradient(45deg, rgba(223,178,255,.1) 0%, rgba(170,241,255,.1) 100%);
+    border: #fff 3px solid;
+    border-radius: 20px;
+
+    color: #aaaaaa;
+}
+
+.Button:hover{
+    border: #555 3px solid;
+    color: #222; 
+    background: linear-gradient(45deg, rgba(223,178,255,.3) 0%, rgba(170,241,255,.3) 100%);
+}
+
+.centerRect{
+
+    background: #FFFFFFAA;
+    width: 30%;
+    height: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+    .centerRect {
+        width: 80%;
+    }
+}
+
+.formInput{
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px;
+    height: auto;
+    width: 100px;
+
+    text-align: center;
+
+    border: #fff 3px solid;
+    border-radius: 10px;
+    
+    background: linear-gradient(45deg, rgba(223,178,255,.1) 0%, rgba(170,241,255,.1) 100%);
+    color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.formInput::placeholder{
+    font-size: .75em;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.submitButton{
+    font-family: 'Montserrat', sans-serif;
+
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar-track{
+	border-radius: 10px;
+	background-color: rgba(223,178,255,.1);
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+    border-radius: 10px;
+	background-color: #333333aa;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #ffffffaa;
+}
+
+.loginButton{
+top: 55%;
+}
+.registerButton{
+top: 70%;
+}
+    @media screen and (max-width: 768px) {
+        
+        .inputTitolo {
+            
+            left: 25% !important;
+            width: 30%;
+        }
+        .inputContenuto{
+            
+            left: 60% !important;
+            width: 50% !important;
+        }
+        
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="columns">
+        <div class="column is-4-desktop is-1-mobile"></div>
+        <div class="column is-4-desktop is-10-mobile">
+            <p class="loggedText is-size-5-mobile">Hi {username}</p>
+            <p class="loggedIcon is-size-3-mobile">📚TODOS</p>
+            <div class="todos">
+                <!-- Replace the content mapping with your data -->
+                <div class="todosList">
+                    <button class="itemFatto is-size-4-desktop is-size-5-mobile">
+                        ✔️
+                    </button>
+                    <button class="itemElimina itemFatto is-size-4-desktop is-size-5-mobile">
+                        ❌
+                    </button>
+                    <li class="itemTitolo is-size-2-desktop is-size-3-mobile">
+                        Todo Title
+                    </li>
+                    <li class="itemContenuto itemTitolo is-size-4-desktop is-size-6-mobile">
+                        Todo Content
+                    </li>
+                </div>
+                <!-- Repeat the above structure for each item in your content array -->
+            </div>
+            <form class="todoInput" action="your_insert_action_endpoint" method="post">
+                <input
+                    type="text"
+                    name="titolo"
+                    class="inputTitolo formInput is-size-3-desktop is-size-4-mobile"
+                    placeholder="Title"
+                    autocomplete="off"
+                    style="width:100px"
+                />
+                <input
+                    type="text"
+                    name="contenuto"
+                    class="inputContenuto formInput is-size-3-desktop is-size-4-mobile"
+                    placeholder="Content"
+                    autocomplete="off"
+                />
+                <button class="Button inputButton is-size-4-desktop is-size-6-mobile" type="submit">
+                    ADD
+                </button>
+            </form>
+        </div>
+        <div class="column is-4-desktop is-1-mobile">
+            <a href="your_logout_endpoint" class="Button logOut is-size-6-desktop is-size-7-mobile">
+                LOGOUT
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

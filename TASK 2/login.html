@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.loginIcon{
+
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-size: 7em;
+        font-weight: 700;
+    
+    }
+    
+    .inputEmail{
+        top: 35%;
+    }
+    .inputUsername{
+        top: 50%;
+    }
+    .inputPassword{
+        top:65%;
+    }
+    
+    .orRegister{
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    
+        font-family: 'Dosis', sans-serif;
+        color: #fff;
+    }
+    
+    .error{
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-family: 'Dosis', sans-serif;
+        color: #e63946;
+    }@import "./notFound.css";
+@import "./home.css";
+@import "./toDo.css";
+@import "./loginRegister.css";  
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    outline: none;
+}
+
+html, body{
+
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+    overflow: hidden;
+}
+
+body{
+    background: rgb(223,178,255);
+    background: linear-gradient(45deg, rgba(223,178,255,1) 0%, rgba(170,241,255,1) 100%);
+
+}
+
+.columns, .column{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px;
+    width: auto;
+    height: auto;
+
+    background: linear-gradient(45deg, rgba(223,178,255,.1) 0%, rgba(170,241,255,.1) 100%);
+    border: #fff 3px solid;
+    border-radius: 20px;
+
+    color: #aaaaaa;
+}
+
+.Button:hover{
+    border: #555 3px solid;
+    color: #222; 
+    background: linear-gradient(45deg, rgba(223,178,255,.3) 0%, rgba(170,241,255,.3) 100%);
+}
+
+.centerRect{
+
+    background: #FFFFFFAA;
+    width: 30%;
+    height: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+    .centerRect {
+        width: 80%;
+    }
+}
+
+.formInput{
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px;
+    height: auto;
+    width: calc(100% - 150px);
+
+    text-align: center;
+
+    border: #fff 3px solid;
+    border-radius: 10px;
+    
+    background: linear-gradient(45deg, rgba(223,178,255,.1) 0%, rgba(170,241,255,.1) 100%);
+    color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.formInput::placeholder{
+    font-size: .75em;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.submitButton{
+    font-family: 'Montserrat', sans-serif;
+
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar-track{
+	border-radius: 10px;
+	background-color: rgba(223,178,255,.1);
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+    border-radius: 10px;
+	background-color: #333333aa;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #ffffffaa;
+}</style>
+</head>
+<body>
+    <div class="columns is-mobile">
+        <div class="column is-4-desktop is-1-mobile"></div>
+        <div class="column is-4-desktop is-10-mobile">
+            <div class="centerRect">
+                <p class="loginIcon">
+                    🤨 <!-- Replace with your emoji code -->
+                </p>
+                <form action="your_login_action_endpoint" method="post">
+                    <input
+                        type="text"
+                        name="username"
+                        class="formInput inputUsername is-size-3-desktop is-size-4-mobile"
+                        placeholder="USERNAME"
+                        autocomplete="off"
+                    />
+    
+                    <input
+                        type="password"
+                        name="password"
+                        class="formInput inputPassword is-size-3-desktop is-size-4-mobile"
+                        placeholder="PASSWORD"
+                        autocomplete="off"
+                    />
+    
+                    <button class="Button submitButton is-size-3-desktop is-size-4-mobile" type="submit">
+                        LOGIN
+                    </button>
+                </form>
+                <a href="/register.html" class="orRegister is-size-5-desktop is-size-7-mobile">
+                    OR REGISTER
+                </a>
+    
+                <p class="error is-size-6-desktop is-size-7-mobile">
+                    <!-- Error or redirection message goes here -->
+                </p>
+            </div>
+        </div>
+        <div class="column column is-4-desktop is-1-mobile"></div>
+    </div>
+    
+</body>
+</html>
